@@ -589,7 +589,9 @@ li {
 }
 .portfolio-link {
   display: block;
+  height: 100%;
   border-radius: 5px;
+  border: 1px solid var(--portfolio-cell-border);
 }
 .portfolio-link:hover {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -602,11 +604,10 @@ li {
 }
 .porfolio-cell {
   padding: 20px 24px;
-  border: 1px solid var(--portfolio-cell-border);
-  border-top: none;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-
+  /* border: 1px solid var(--portfolio-cell-border); */
+  /* border-top: none; */
+  /* border-bottom-right-radius: 5px; */
+  /* border-bottom-left-radius: 5px; */
   /* height: calc(100% - 294px); */
 }
 .portfolio-title {
