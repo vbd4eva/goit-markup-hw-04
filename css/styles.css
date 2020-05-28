@@ -83,7 +83,7 @@ rgba(255, 255, 255, 0.1)
 rgba(255, 255, 255, 0.4)
     1. цвет текста копирайт футкра   
     
-rgba(47, 48, 58, 0.8);   
+rgba(47, 48, 58, 0.8);  - --transparent-background  
     1. span{ background-color } секции "Чем мы занимаемся"
     
 */
@@ -93,6 +93,17 @@ rgba(47, 48, 58, 0.8);
 font-family: 'Roboto', sans-serif;
 font-family: 'Raleway', sans-serif;
 */
+/* .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0px;
+  padding: 0px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+} */
+
 :root {
   --color-text-primary: #757575;
   --color-text-title: #212121;
@@ -103,6 +114,7 @@ font-family: 'Raleway', sans-serif;
 
   --color-background-primary: #ffffff;
   --color-background-secondary: #f5f4fa;
+  --color-background-transparent: rgba(47, 48, 58, 0.8);
 
   --color-footer-background: #2f303a;
   --color-copyright: rgba(255, 255, 255, 0.4);
@@ -382,10 +394,27 @@ li {
 }
 /* Герой */
 .studio-hero {
-  padding: 200px 0;
+  height: calc(100vh - 81px);
+  position: relative;
+
+  background-image: linear-gradient(
+      var(--color-background-transparent),
+      var(--color-background-transparent)
+    ),
+    url("../images/hero-image/hero-image.jpg");
+  background-position: center;
+  background-size: cover;
+  background-color: var(--color-background-transparent);
+
   text-align: center;
 }
-.studio-hero > .title {
+.studio-hero__container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.studio-hero__title {
   max-width: 646px;
 
   margin: 0 auto 46px;
@@ -469,7 +498,7 @@ li {
   display: block;
   padding-top: 27px;
   padding-bottom: 27px;
-  background: rgba(47, 48, 58, 0.8);
+  background-color: var(--color-background-transparent);
   color: var(--color-white);
   font-weight: 700;
   line-height: 1.14;
@@ -486,6 +515,8 @@ li {
 .team-item {
   background-color: var(--color-white);
   border-radius: 4px;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
   text-align: center;
 }
 .team-icon {
@@ -557,6 +588,10 @@ li {
   overflow: hidden;
   border-radius: 5px;
 }
+.portfolio-item:hover {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
+}
 .portfolio-icon {
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
@@ -575,14 +610,11 @@ li {
   letter-spacing: 0.06em;
 }
 .portfolio-text {
+  display: none;
   font-size: 18px;
   line-height: 1.56;
 }
-.portfolio-link:hover .portfolio-text,
-.portfolio-link:focus .portfolio-text {
-  color: var(--color-white);
-  background: rgba(33, 150, 243, 0.9);
-}
+
 .portfolio-tag {
   font-size: 16px;
   line-height: 1.87;
