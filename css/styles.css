@@ -395,6 +395,7 @@ li {
 /* Герой */
 .studio-hero {
   height: calc(100vh - 81px);
+  min-height: 313px;
   position: relative;
 
   background-image: linear-gradient(
