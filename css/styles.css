@@ -586,13 +586,16 @@ li {
 .portfolio-item {
   width: calc((100% - 30px * 2) / 3);
   background-color: var(--color-white);
-  overflow: hidden;
+}
+.portfolio-link {
+  display: block;
   border-radius: 5px;
 }
-.portfolio-item:hover {
+.portfolio-link:hover {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
 }
+
 .portfolio-icon {
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
@@ -603,6 +606,8 @@ li {
   border-top: none;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
+
+  /* height: calc(100% - 294px); */
 }
 .portfolio-title {
   margin-bottom: 4px;
