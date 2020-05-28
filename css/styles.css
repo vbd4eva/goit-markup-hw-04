@@ -93,17 +93,6 @@ rgba(47, 48, 58, 0.8);
 font-family: 'Roboto', sans-serif;
 font-family: 'Raleway', sans-serif;
 */
-
-/*html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}*/
-
 :root {
   --color-text-primary: #757575;
   --color-text-title: #212121;
@@ -297,12 +286,30 @@ li {
   color: var(--color-accent);
 }
 .contacts-link {
-  display: block;
+  /*display: block;*/
+  display: flex;
+
   padding: 28px 0;
   color: var(--color-text-primary);
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+.contacts-link:before {
+  content: "";
+
+  margin-right: 10px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.contacts-link-mail-icon:before {
+  background-image: url("../images/contact-icons/contacts-link-mail-icon.svg");
+  width: 18px;
+}
+.contacts-link-tel-icon:before {
+  background-image: url("../images/contact-icons/contacts-link-tel-icon.svg");
+  width: 12px;
 }
 /**/
 /* Подвал */
@@ -398,19 +405,44 @@ li {
 .features-item {
   width: calc((100% - 90px) / 4);
 }
+.features-item:before {
+  content: "";
+  display: block;
+  height: 120px;
 
-.studio-features .icon {
   background-color: var(--color-background-secondary);
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+.features-item:nth-child(1):before {
+  background-image: url("../images/features-icons/antenna-1-hover.svg");
+}
+.features-item:nth-child(2):before {
+  background-image: url("../images/features-icons/clock-1.svg");
+}
+.features-item:nth-child(3):before {
+  background-image: url("../images/features-icons/diagram-1.svg");
+}
+.features-item:nth-child(4):before {
+  background-image: url("../images/features-icons/astronaut-1.svg");
+}
+.studio-features .icon {
+  /* background-color: var(--color-background-secondary);
   display: block;
   height: 120px;
   border-radius: 4px;
   margin-bottom: 30px;
+  */
 }
+/*
 .studio-features .icon:hover,
 .studio-features .icon:focus {
   color: var(--color-white);
   background-color: var(--color-accent);
-}
+}*/
 .studio-features .subject {
   font-size: 14px;
   line-height: 1.14;
