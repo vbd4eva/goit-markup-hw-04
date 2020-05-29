@@ -253,6 +253,7 @@ li {
   height: 44px;
   border-radius: 22px;
 }
+
 .social-link > svg {
   box-sizing: content-box;
   padding: 12px;
@@ -435,18 +436,7 @@ li {
 .features-item {
   width: calc((100% - 90px) / 4);
 }
-.features-item:before {
-  content: "";
-  display: block;
-  height: 120px;
 
-  background-color: var(--color-background-secondary);
-  background-position: center;
-  background-repeat: no-repeat;
-
-  border-radius: 4px;
-  margin-bottom: 30px;
-}
 .features-item:nth-child(1):before {
   background-image: url("../images/features-icons/antenna-1-hover.svg");
 }
