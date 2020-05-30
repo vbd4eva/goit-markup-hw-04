@@ -545,11 +545,9 @@ li {
   color: var(--color-light);
 }
 .studio-customers__icon {
-  fill: var(--color-light);
+  fill: currentColor;
 }
-.studio-customers__icon:hover {
-  fill: var(--color-accent);
-}
+
 .client-logo-1 {
   width: 44.27px;
   height: 49.23px;
