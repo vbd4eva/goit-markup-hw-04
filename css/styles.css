@@ -244,25 +244,27 @@ li {
   padding-left: 0px;
   display: flex;
 }
-.social-list > .social-item + .social-item {
+.social-list__item + .social-list__item {
   margin-left: 10px;
 }
-.social-link {
+.social-list__link {
   display: block;
   width: 44px;
   height: 44px;
+  padding: 11px;
   border-radius: 22px;
 }
-
-.social-link > svg {
-  box-sizing: content-box;
-  padding: 12px;
+.social-list__icon {
+  fill: currentColor;
+  width: 22px;
+  height: 22px;
 }
+
 /* Относительное позиционирование */
 .relative {
   position: relative;
 }
-/* Центрирование внутри контейнера */
+/* Центрирование внутри контейнера   */
 .in-center {
   position: absolute;
   left: 50%;
@@ -378,12 +380,12 @@ li {
   text-transform: uppercase;
 }
 
-.footer-social .social-link {
+.footer-social .social-list__link {
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--color-white);
 }
-.footer-social .social-link:hover,
-.footer-social .social-link:focus {
+.footer-social .social-list__link:hover,
+.footer-social .social-list__link:focus {
   background-color: var(--color-accent);
 }
 
@@ -533,11 +535,11 @@ li {
   justify-content: center;
   margin-bottom: 24px;
 }
-.team-social .social-link {
+.team-social .social-list__link {
   color: var(--color-light);
 }
-.team-social .social-link:hover,
-.team-social .social-link:focus {
+.team-social .social-list__link:hover,
+.team-social .social-list__link:focus {
   background-color: var(--color-accent);
   color: var(--color-white);
 }
