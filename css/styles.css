@@ -281,7 +281,7 @@ li {
 .header-row,
 .navigation,
 .site-nav,
-.header-row > .contacts {
+.contact-us {
   display: flex;
   align-items: center;
 }
@@ -312,8 +312,8 @@ li {
 .site-nav-link.current {
   color: var(--color-accent);
 }
-.contacts-link {
-  /*display: block;*/
+
+.contact-us__link {
   display: flex;
 
   padding: 28px 0;
@@ -322,23 +322,15 @@ li {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.contacts-link:before {
-  content: "";
-
+.contact-us__icon {
+  width: 16px;
+  height: 16px;
   margin-right: 10px;
 
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.contacts-link-mail-icon:before {
-  background-image: url("../images/contact-icons/contacts-link-mail-icon.svg");
-  width: 18px;
-}
-.contacts-link-tel-icon:before {
-  background-image: url("../images/contact-icons/contacts-link-tel-icon.svg");
-  width: 12px;
+  fill: currentColor;
 }
 /**/
+
 /* Подвал */
 /**/
 .page-footer {
