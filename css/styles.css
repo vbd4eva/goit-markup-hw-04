@@ -60,9 +60,9 @@
 (+)    1. Footer background-color
 */
 
-/*  #AFB1B8 - light grey
+/*  #AFB1B8  --color-light
   (+)  1. Цвет значков соц.сетей секции "Наша команда"
-    2. Цвет Логотипов компаний секции "Постоянные клиенты"
+  (+)  2. Цвет Логотипов компаний секции "Постоянные клиенты"
 
 */
 
@@ -258,6 +258,18 @@ li {
   box-sizing: content-box;
   padding: 12px;
 }
+/* Относительное позиционирование */
+.relative {
+  position: relative;
+}
+/* Центрирование внутри контейнера */
+.in-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /**/
 /* Шапка сайта */
 /**/
@@ -397,7 +409,6 @@ li {
 .studio-hero {
   height: calc(100vh - 81px);
   min-height: 313px;
-  position: relative;
 
   background-image: linear-gradient(
       var(--color-background-transparent),
@@ -409,12 +420,6 @@ li {
   background-color: var(--color-background-transparent);
 
   text-align: center;
-}
-.studio-hero__container {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
 }
 .studio-hero__title {
   max-width: 646px;
@@ -536,14 +541,15 @@ li {
   background-color: var(--color-accent);
   color: var(--color-white);
 }
+
 /* Постоянные клиенты */
-.customers-list {
+.studio-customers__list {
   display: flex;
 }
-.customers-item {
+.studio-customers__item {
   width: calc((100% - (30px * 5)) / 6);
 }
-.customers-link {
+.studio-customers__link {
   position: relative;
   display: block;
   min-height: 90px;
@@ -551,15 +557,39 @@ li {
   border-radius: 4px;
   color: var(--color-light);
 }
-.customers-link > svg {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+.studio-customers__icon {
+  fill: var(--color-light);
+}
+.studio-customers__icon:hover {
+  fill: var(--color-accent);
+}
+.client-logo-1 {
+  width: 44.27px;
+  height: 49.23px;
+}
+.client-logo-2 {
+  width: 40px;
+  height: 52px;
+}
+.client-logo-3 {
+  width: 41px;
+  height: 42.6px;
+}
+.client-logo-4 {
+  width: 79.66px;
+  height: 42.02px;
+}
+.client-logo-5 {
+  width: 59px;
+  height: 47px;
+}
+.client-logo-6 {
+  width: 88.48px;
+  height: 45.44px;
 }
 /**/
+
 /* Страница Портфолио */
-/**/
 .portfolio-filter {
   display: flex;
   justify-content: center;
